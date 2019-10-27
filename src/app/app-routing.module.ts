@@ -7,6 +7,7 @@ import { LoginComponent } from "./pages/login/login.component";
 import { LayoutblankComponent } from "./components/layoutblank/layoutblank.component";
 import { LayoutAdminComponent } from "./components/layout-admin/layout-admin.component";
 import { LoginErrorsComponent } from './pages/login-errors/login-errors.component';
+import { CreateUserComponent } from './pages/create-user/create-user.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,8 @@ const routes: Routes = [
     component: LayoutAdminComponent,
     children: [
       { path: "dashboard", component: DashboardComponent },
-      { path: "users", component: UsersComponent }
+      { path: "users", component: UsersComponent },
+      { path: "create", component: CreateUserComponent }
     ]
   },
   { path: "login", component: LayoutblankComponent, children:[

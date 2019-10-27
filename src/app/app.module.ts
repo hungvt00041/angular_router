@@ -18,6 +18,17 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { LayoutAdminComponent } from './components/layout-admin/layout-admin.component';
 import { LayoutblankComponent } from './components/layoutblank/layoutblank.component';
 import { LoginErrorsComponent } from './pages/login-errors/login-errors.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DialogueConfirmComponent } from './pages/dialogue-confirm/dialogue-confirm.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { CreateUserComponent } from './pages/create-user/create-user.component';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule} from '@angular/forms'
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -30,7 +41,9 @@ import { LoginErrorsComponent } from './pages/login-errors/login-errors.componen
     SidenavComponent,
     LayoutAdminComponent,
     LayoutblankComponent,
-    LoginErrorsComponent
+    LoginErrorsComponent,
+    DialogueConfirmComponent,
+    CreateUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +53,19 @@ import { LoginErrorsComponent } from './pages/login-errors/login-errors.componen
     MatToolbarModule,
     MatTableModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    MatDialogModule,
+    MatInputModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule
+
+  ],
+  entryComponents: [
+    DialogueConfirmComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

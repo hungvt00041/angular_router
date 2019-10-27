@@ -1,0 +1,22 @@
+
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Ten" [(ngModel)]="user.name"></textarea>
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Email" [(ngModel)]="user.email"></textarea>
+      </mat-form-field>
+      <br/>
+      <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Birthyear" [(ngModel)]="user.birthYear"></textarea>
+        </mat-form-field>
+        <br/>
+        <mat-form-field class="example-full-width">
+            <textarea matInput placeholder="Avatar"></textarea>
+          </mat-form-field>
+          <br/>
+
+<button mat-raised-button color="primary" (click)="onSubmit()">
+    <mat-icon>add</mat-icon>Submit
+  </button>
+
